@@ -2,6 +2,7 @@
 Projekt 2 - klasyfikator spamu z wykorzystaniem klasyfikatora Bayes'a
 
 Zbiór uczący:
+
 https://www.kaggle.com/uciml/sms-spam-collection-dataset
 https://www.kaggle.com/veleon/ham-and-spam-dataset
 https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection
