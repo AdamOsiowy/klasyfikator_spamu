@@ -3,7 +3,7 @@ Projekt 2 - klasyfikator spamu z wykorzystaniem regresji logistycznej
 
 Zbiór uczący:
 
-https://www.kaggle.com/uciml/sms-spam-collection-dataset
+https://www.kaggle.com/gayatrisrinivasan/spam-data
 
 https://www.kaggle.com/veleon/ham-and-spam-dataset
 
