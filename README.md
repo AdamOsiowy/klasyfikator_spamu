@@ -18,3 +18,9 @@ https://www.kaggle.com/harshsinha1234/email-spam-classification
 https://www.kaggle.com/ozlerhakan/spam-or-not-spam-dataset
 
 https://www.kaggle.com/studymart/spam-email-detection-dataset
+
+Łączny rozmiar zbioru: 1378245\
+Zaklasyfikowanych jako spam: 110677\
+Zaklasyfikowane jako 'nie spam': 1267568
+
+Zbiór uczący: 90%
