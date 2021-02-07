@@ -2,6 +2,15 @@ import pandas as pd
 import re
 import os
 import glob
+from nltk import WordNetLemmatizer
+from nltk import word_tokenize
+
+lematizer = WordNetLemmatizer()
+
+
+def tokenize(text) -> str:
+    tokens = word_tokenize(text)
+    return ' '.join([lematizer.lemmatize(tok) for tok in tokens])
 
 
 def processDataset1():
@@ -202,9 +211,29 @@ def mergeDatasets():
                         ham_counter += 1
                     new.write(line)
 
-    print(spam_counter + ham_counter, spam_counter, ham_counter)
     os.chdir(current_path)
 
 
+def cleanData():
+    couter = 0
+    dataset_path = '../data/data.csv'
+    clean_dataset_path = '../data/data_clean.csv'
+    with open(clean_dataset_path, mode='w', encoding='utf8') as new:
+        new.write('label\temail\n')
+        with open(dataset_path, mode='r', encoding='utf8') as old:
+            for line in old:
+                print(couter)
+                if line == 'label\temail\n':
+                    continue
+                # delete empty lines, remove non-ASCII characters, transform to lower case
+                if len(line) > 5:
+                    line = re.sub(r'[^\x00-\x7F]+', '', line)
+                    line = line.lower()
+                    line = line.split('\t', maxsplit=1)
+                    line[1] = tokenize(line[1])
+                    new.write('\t'.join(line) + '\n')
+                couter += 1
+
+
 if __name__ == "__main__":
-    mergeDatasets()
+    cleanData()
