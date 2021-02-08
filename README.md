@@ -26,7 +26,7 @@ Zaklasyfikowane jako 'nie spam': 1266259
 Zbiór uczący: 90%
 
 Cecha: TF*IDF\
-TF - częstotliwość termu - jak często term występuje w dokumencie
+TF - częstotliwość termu - jak często term występuje w dokumencie\
 IDF - odwrotna częstotliwość dokumentu - określa jak wiele informacji niesie słowo
 
 **Pierwsze wyniki:**\
